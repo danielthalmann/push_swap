@@ -1,7 +1,7 @@
 #include "push_swap.h"
 #include <stdlib.h>
 
-t_stack *ps_create_stack()
+t_stack	*ps_create_stack(void)
 {
 	t_stack *stack;
 

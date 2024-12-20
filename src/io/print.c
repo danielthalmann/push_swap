@@ -11,7 +11,7 @@ void print_fd(int fd, char* string)
 	write(fd, string, length);
 }
 
-void printlf()
+void printlf(void)
 {
 	print("\n");
 }

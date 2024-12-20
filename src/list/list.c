@@ -18,9 +18,9 @@
  *
  * @return t_lst*
  */
-t_lst	*lst_create()
+t_lst	*lst_create(void)
 {
-	return lst_new(0);
+	return (lst_new(0));
 }
 
 /**

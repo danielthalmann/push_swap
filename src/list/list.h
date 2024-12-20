@@ -15,13 +15,13 @@
 
 typedef struct s_lst
 {
-	void *content;
-	int	c_int;
-	struct s_lst *next;
-	struct s_lst *previous;
+	void			*content;
+	int				c_int;
+	struct s_lst	*next;
+	struct s_lst	*previous;
 }	t_lst;
 
-t_lst	*lst_create();
+t_lst	*lst_create(void);
 t_lst	*lst_new(void *content);
 t_lst	*lst_last(t_lst *lst);
 void	lst_add_back(t_lst **lst, t_lst *lnew);

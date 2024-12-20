@@ -10,8 +10,10 @@ ASRC=src/main.c \
 	src/exceptions/exceptions.c \
 	src/ps/add_value.c \
 	src/ps/create_stack.c \
+	src/ps/execute.c \
 	src/ps/del_value.c \
 	src/ps/destroy_stack.c \
+	src/ps/is_ordered.c \
 	src/ps/print_stack.c \
 	src/ps/rotate.c \
 	src/ps/r_rotate.c \
@@ -38,7 +40,7 @@ all: $(AOBJ)
 debug: CFLAGS = -g
 debug: clean all
 	rm -f $(AOBJ)
-	./$(BUILD_FOLDER)/$(NAME) 1 5 266 9 8
+	./$(BUILD_FOLDER)/$(NAME) 1 6 5 8 9
 
 clean:
 	rm -f $(AOBJ)

@@ -14,6 +14,21 @@
 # define PUSH_SWAP_H
 # include "../list/list.h"
 
+
+typedef enum e_ps
+{
+	sa = 1,
+	sb,
+	ss,
+	pa,
+	pb,
+	ra,
+	rb,
+	rr,
+	rra,
+	rrb,
+	rrr
+}	t_ps;
 typedef struct s_ps_list
 {
 	t_lst	*first;
@@ -35,6 +50,7 @@ void	ps_add_front(t_ps_list *list, int val);
 void	ps_add_back(t_ps_list *list, int val);
 void	ps_del_front(t_ps_list *list);
 void	ps_del_back(t_ps_list *list);
+int		ps_is_ordered(t_stack *stack);
 void	ps_print_stack(t_stack *stack);
 void	ps_ra(t_stack *stack);
 void	ps_rb(t_stack *stack);
@@ -44,7 +60,9 @@ void	ps_rrb(t_stack *stack);
 void	ps_rrr(t_stack *stack);
 void	ps_sa(t_stack *stack);
 void	ps_sb(t_stack *stack);
+void	ps_ss(t_stack *stack);
 void	ps_pa(t_stack *stack);
 void	ps_pb(t_stack *stack);
+void	ps_execute(t_stack *stack, t_ps ps);
 
 #endif

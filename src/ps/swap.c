@@ -13,29 +13,39 @@
 #include "push_swap.h"
 
 /**
- * @brief shift up all elements of stackbby 1. The first element
- * becomes the last one.
+ * @brief swap the first 2 elements at the top of stacka. Do nothing if thereis
+ * only one or no elements
  *
  * @param stack
  */
 void	ps_swap_list(t_ps_list *pslist)
 {
-	t_lst	*next_first;
+	t_lst	*new_first;
 	t_lst	*current_first;
 
-	if (pslist->len < 2)
+	if (2 > pslist->len)
 		return;
-	next_first = pslist->first->next;
-	current_first = pslist->first;
-
-	current_first->previous = next_first;
-	current_first->next = next_first->next;
-	next_first->next = current_first;
-
-	pslist->first = next_first;
-
-	pslist->first->previous = 0;
-	pslist->last->next = 0;
+	if (2 == pslist->len)
+	{
+		current_first = pslist->first;
+		pslist->first = pslist->last;
+		pslist->last = current_first;
+		pslist->first->previous = 0;
+		pslist->first->next = pslist->last;
+		pslist->last->previous = pslist->first;
+		pslist->last->next = 0;
+	} 
+	else
+	{
+		current_first = pslist->first;
+		new_first = pslist->first->next;
+		current_first->previous = new_first;
+		current_first->next = new_first->next;
+		new_first->next = current_first;
+		pslist->first = new_first;
+		pslist->first->previous = 0;
+		pslist->last->next = 0;
+	}
 }
 
 /**
@@ -65,7 +75,7 @@ void	ps_sb(t_stack *stack)
  *
  * @param lists
  */
-void	ps_sss(t_stack *stack)
+void	ps_ss(t_stack *stack)
 {
 	ps_sa(stack);
 	ps_sb(stack);

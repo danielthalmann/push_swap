@@ -20,6 +20,33 @@ void ps_print_list(t_lst *lst)
 	clst = lst;
 	while (clst)
 	{
+		print("| ");
+		print_int(clst->c_int);
+		print(" ");
+		clst = clst->next;
+	}
+	printlf();
+}
+
+void ps_print_stack(t_stack *stack)
+{
+	print("[Stack A (");
+	print_int(stack->a.len);
+	print(")] ");
+	ps_print_list(stack->a.first);
+	print("[Stack B (");
+	print_int(stack->b.len);
+	print(")] ");
+	ps_print_list(stack->b.first);
+}
+
+void ps_print_list2(t_lst *lst)
+{
+	t_lst *clst;
+
+	clst = lst;
+	while (clst)
+	{
 		print("- ");
 		print_int(clst->c_int);
 		printlf();
@@ -27,14 +54,14 @@ void ps_print_list(t_lst *lst)
 	}
 }
 
-void ps_print_stack(t_stack *stack)
+void ps_print_stack2(t_stack *stack)
 {
 	print("[Stack A (");
 	print_int(stack->a.len);
 	print(")]\n");
-	ps_print_list(stack->a.first);
+	ps_print_list2(stack->a.first);
 	print("[Stack B (");
 	print_int(stack->b.len);
 	print(")]\n");
-	ps_print_list(stack->b.first);
+	ps_print_list2(stack->b.first);
 }

@@ -13,8 +13,8 @@
 #include "push_swap.h"
 
 /**
- * @brief shift up all elements of stackbby 1. The first element
- * becomes the last one.
+ * @brief rotate - shift down all elements of stack a by 1. The last element
+ * becomes the first one.
  *
  * @param stack
  */
@@ -41,8 +41,8 @@ void	ps_r_rotate_list(t_ps_list *pslist)
 
 
 /**
- * @brief rotate a - shift up all elements of stack a by 1. The first element
- * becomes the last one.
+ * @brief rotate a - shift down all elements of stack a by 1. The last element
+ * becomes the first one.
  *
  * @param stack
  */
@@ -52,8 +52,8 @@ void	ps_rra(t_stack *stack)
 }
 
 /**
- * @brief rotate b - shift up all elements of stack b by 1. The first element
- * becomes the last one.
+ * @brief rotate b - shift down all elements of stack b by 1. The last element
+ * becomes the first one.
  *
  * @param stack
  */

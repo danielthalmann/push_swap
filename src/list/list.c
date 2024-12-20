@@ -128,8 +128,8 @@ void	lst_delone(t_lst *lst, void (*del)(void*))
  */
 void	lst_clear(t_lst **lst, void (*del)(void*))
 {
-	t_lst *l;
-	t_lst *p;
+	t_lst	*l;
+	t_lst	*p;
 
 	if (!lst)
 		return;

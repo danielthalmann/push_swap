@@ -46,8 +46,8 @@ int	_isdigit(int c)
  */
 unsigned int	_convnum(const char *str)
 {
-	unsigned int value;
-	int			 first;
+	unsigned int	value;
+	int				first;
 
 	first = 1;
 	value = 0;
@@ -77,8 +77,8 @@ unsigned int	_convnum(const char *str)
  */
 int	ascii_to_int(const char *string)
 {
-	unsigned int value;
-	int			 sign;
+	unsigned int	value;
+	int				sign;
 
 	if (*string == 0)
 		return (0);

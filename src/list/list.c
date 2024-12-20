@@ -33,7 +33,7 @@ t_lst	*lst_create()
  */
 t_lst	*lst_new(void *content)
 {
-	t_lst	*list;
+	t_lst *list;
 
 	list = malloc(sizeof(t_lst));
 	if (list)
@@ -84,7 +84,7 @@ void	lst_add_front(t_lst **lst, t_lst *lnew)
  */
 void	lst_add_back(t_lst **lst, t_lst *lnew)
 {
-	t_lst	*llast;
+	t_lst *llast;
 
 	if (!*lst)
 	{
@@ -111,7 +111,8 @@ void	lst_add_back(t_lst **lst, t_lst *lnew)
  */
 void	lst_delone(t_lst *lst, void (*del)(void*))
 {
-	if(del) {
+	if(del)
+	{
 		(*del)(lst->content);
 	}
 	free(lst);
@@ -127,11 +128,11 @@ void	lst_delone(t_lst *lst, void (*del)(void*))
  */
 void	lst_clear(t_lst **lst, void (*del)(void*))
 {
-	t_lst	*l;
-	t_lst	*p;
+	t_lst *l;
+	t_lst *p;
 
 	if (!lst)
-		return ;
+		return;
 	l = *lst;
 	while (l)
 	{

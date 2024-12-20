@@ -8,12 +8,12 @@
  */
 void	ps_r_rotate_list(t_ps_list *pslist)
 {
-	t_lst	*previous_last;
-	t_lst	*current_first;
-	t_lst	*current_last;
+	t_lst *previous_last;
+	t_lst *current_first;
+	t_lst *current_last;
 
 	if (pslist->len < 2)
-		return ;
+		return;
 	previous_last = pslist->last->previous;
 	current_last = pslist->last;
 	current_first = pslist->first;

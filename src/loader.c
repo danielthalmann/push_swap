@@ -21,9 +21,9 @@ int fill_stack(int argc, char** argv, t_stack **stack)
 
 int load_2arg(char *argv, t_stack **stack)
 {
-	char **values;
+	char		 **values;
 	unsigned int len;
-	int ret;
+	int			 ret;
 
 	values = split(argv, ' ');
 	if (!values)

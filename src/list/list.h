@@ -15,10 +15,10 @@
 
 typedef struct s_lst
 {
-	void			*content;
-	int				c_int;
-	struct s_lst	*next;
-	struct s_lst	*previous;
+	void *content;
+	int	c_int;
+	struct s_lst *next;
+	struct s_lst *previous;
 }	t_lst;
 
 t_lst	*lst_create();

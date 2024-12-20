@@ -4,15 +4,15 @@
 
 typedef struct s_ps_list
 {
-	t_lst	*first;
-	t_lst	*last;
-	int		len;
+	t_lst *first;
+	t_lst *last;
+	int	len;
 }	t_ps_list;
 
 typedef struct s_stack
 {
-	t_ps_list	a;
-	t_ps_list	b;
+	t_ps_list a;
+	t_ps_list b;
 	/* data */
 }	t_stack;
 

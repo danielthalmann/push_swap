@@ -8,10 +8,12 @@ void ps_del_back(t_ps_list *list)
 	if(1 > list->len)
 		return;
 	to_del = list->last;
-	if (1 == list->len) {
+	if (1 == list->len)
+	{
 		list->first = 0;
 		list->last = 0;
-	} else {
+	}
+	else {
 		list->last = list->last->previous;
 		list->last->next = 0;
 	}
@@ -26,10 +28,12 @@ void ps_del_front(t_ps_list *list)
 	if(1 > list->len)
 		return;
 	to_del = list->first;
-	if (1 == list->len) {
+	if (1 == list->len)
+	{
 		list->first = 0;
 		list->last = 0;
-	} else {
+	}
+	else {
 		list->first = list->first->next;
 		list->first->previous = 0;
 	}

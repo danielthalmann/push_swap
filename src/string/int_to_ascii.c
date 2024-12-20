@@ -18,9 +18,9 @@ int	len_int_to_ascii(long nb)
 
 char	*int_to_ascii(int nb)
 {
-	char	*s;
-	int	length;
-	int		v;
+	char *s;
+	int	 length;
+	int	 v;
 
 	length = len_int_to_ascii(nb);
 

@@ -16,10 +16,10 @@ void	split_cpy(char const *start, char const *end, char *mem);
  */
 char	**split(char const *string, char c)
 {
-	char const	*start;
-	char const	*end;
-	char		**split;
-	int			y;
+	char const *start;
+	char const *end;
+	char	   **split;
+	int		   y;
 
 	split = split_allocate(string, c);
 	if (!split)
@@ -59,9 +59,9 @@ void	split_move_forward(char const **s, char c, int not)
 
 char	**split_allocate(char const *s, char c)
 {
-	char const	*str;
-	int			is_sep;
-	int			count;
+	char const *str;
+	int		   is_sep;
+	int		   count;
 
 	count = 0;
 	str = s;

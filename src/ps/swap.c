@@ -8,11 +8,11 @@
  */
 void	ps_swap_list(t_ps_list *pslist)
 {
-	t_lst	*next_first;
-	t_lst	*current_first;
+	t_lst *next_first;
+	t_lst *current_first;
 
 	if (pslist->len < 2)
-		return ;
+		return;
 	next_first = pslist->first->next;
 	current_first = pslist->first;
 
